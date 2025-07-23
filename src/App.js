@@ -1,18 +1,24 @@
 const express=require("express")
 const app=express()
 
+//Order matters
 app.use("/hello",(req,res)=>{
-    res.send("Hello from the server")
+    res.send("Helloo")
 })
 
-app.use("/test",(req,res)=>{
-    res.send("Mic check")
+app.use("/hello/xyz",(req,res)=>{
+    res.send("Hello")
+})
+
+
+app.use("/hii",(req,res)=>{
+    res.send("Hiiii")
 })
 
 app.use("/",(req,res)=>{
-    res.send("namaste from dashboard")
+    res.send("Home Page")
 })
 
 app.listen(7777,()=>{
-    console.log("Successfully running")
-});
+    console.log("Server is running")
+})
