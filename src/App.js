@@ -1,2 +1,2 @@
-const Routing = require("./Routing");
-Routing;
+const { Routing } = require("./Routing");
+Routing();
